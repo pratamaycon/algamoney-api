@@ -13,8 +13,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.example.algamoney.api.model.enums.TipoLancamento;
+
+
+
+
 
 @Entity
 @Table(name = "lancamento")
@@ -24,25 +30,33 @@ public class Lancamento {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
+	@NotNull(message = "{nome.notnull}")
+	@Size(min = 3, max = 50, message = "{nome.size}")
 	private String descricao;
 	
+	@NotNull(message = "{nome.notnull}")
 	@Column(name = "data_vencimento")
 	private LocalDate dataVencimento;
 	
 	@Column(name = "data_pagamento")
 	private LocalDate dataPagamento;
 	
+	@NotNull(message = "{nome.notnull}")
 	private BigDecimal valor;
 	
+	@Size(min = 3, max = 100, message = "{nome.size}")
 	private String observacao;
 	
+	@NotNull(message = "{nome.notnull}")
 	@Enumerated(EnumType.STRING)
 	private TipoLancamento tipo;
 	
+	@NotNull(message = "{nome.notnull}")
 	@ManyToOne
 	@JoinColumn(name = "codigo_categoria")
 	private Categoria categoria;
 	
+	@NotNull(message = "{nome.notnull}")
 	@ManyToOne
 	@JoinColumn(name = "codigo_pessoa")
 	private Pessoa pessoa;
@@ -117,6 +131,31 @@ public class Lancamento {
 
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
+	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Lancamento other = (Lancamento) obj;
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
+		return true;
 	}
 
 }
