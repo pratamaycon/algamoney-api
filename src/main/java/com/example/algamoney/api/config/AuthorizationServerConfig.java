@@ -24,22 +24,29 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
+
 	
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory()
-			.withClient("angular")
-			.secret(passwordEncoder.encode("@ngul@r0"))
-			.scopes("read", "write")
-			.authorizedGrantTypes("password", "authorization_code", "refresh_token")
-			.accessTokenValiditySeconds(20)
-			.refreshTokenValiditySeconds(3600 * 24);
+				.withClient("angular")
+				.secret(passwordEncoder.encode("@ngul@r0"))
+				.scopes("read", "write")
+				.authorizedGrantTypes("password", "authorization_code", "refresh_token")
+				.accessTokenValiditySeconds(60 * 3)
+				.refreshTokenValiditySeconds(3600 * 24)
+			.and()
+				.withClient("mobile")
+				.secret(passwordEncoder.encode("m0b1l30"))
+				.scopes("read")
+				.authorizedGrantTypes("password", "authorization_code", "refresh_token")
+				.accessTokenValiditySeconds(60 * 3)
+				.refreshTokenValiditySeconds(3600 * 24);
 			
 	}
 	
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		// TODO Auto-generated method stub
 		endpoints
 			.tokenStore(tokenStore())
 			.reuseRefreshTokens(false)
