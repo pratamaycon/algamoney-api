@@ -22,6 +22,8 @@ import com.example.algamoney.api.event.RecursoCriadoEvent;
 import com.example.algamoney.api.model.Categoria;
 import com.example.algamoney.api.reposiory.CategoriaRepository;
 
+import io.swagger.annotations.ApiOperation;
+
 
 @RestController
 @RequestMapping("/categorias")
@@ -35,6 +37,7 @@ public class CategoriaResource {
 	
 	@GetMapping
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_CATEGORIA') and #oauth2.hasScope('read')")
+	@ApiOperation(value = "Retorna uma lista de Categorias", response = Categoria[].class)
 	public List<Categoria> listar(){
 		return categoriaRepository.findAll();
 	}
