@@ -10,7 +10,7 @@ public class LancamentoDTO {
 	private Long codigo;
 	private String descricao;
 	private LocalDate dataVencimento;
-	private LocalDate datPagamento;
+	private LocalDate dataPagamento;
 	private BigDecimal valor;
 	private TipoLancamento tipo;
 	private String categoria;
@@ -21,7 +21,7 @@ public class LancamentoDTO {
 		this.codigo = codigo;
 		this.descricao = descricao;
 		this.dataVencimento = dataVencimento;
-		this.datPagamento = datPagamento;
+		this.dataPagamento = datPagamento;
 		this.valor = valor;
 		this.tipo = tipo;
 		this.categoria = categoria;
@@ -53,11 +53,11 @@ public class LancamentoDTO {
 	}
 
 	public LocalDate getDatPagamento() {
-		return datPagamento;
+		return dataPagamento;
 	}
 
 	public void setDatPagamento(LocalDate datPagamento) {
-		this.datPagamento = datPagamento;
+		this.dataPagamento = datPagamento;
 	}
 
 	public BigDecimal getValor() {

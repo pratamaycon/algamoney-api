@@ -1,14 +1,12 @@
 package com.example.algamoney.api.config.property;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties("algomoney")
 @Component
 public class AlgamoneyApiProperty {
 
 	private final Seguranca seguranca = new Seguranca();
-	private String originPermitida = "http://localhost:8081";
+	private String originPermitida = "http://localhost:4200";
 
 	public Seguranca getSeguranca() {
 		return seguranca;
