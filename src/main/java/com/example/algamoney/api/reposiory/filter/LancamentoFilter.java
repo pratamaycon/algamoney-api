@@ -6,7 +6,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class LancamentoFilter {
 	
-
 	private String descricao;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -38,4 +37,5 @@ public class LancamentoFilter {
 	public void setDataVencimentoAte(LocalDate dataVencimentoAte) {
 		this.dataVencimentoAte = dataVencimentoAte;
 	}
+	
 }
