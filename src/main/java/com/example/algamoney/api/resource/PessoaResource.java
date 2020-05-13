@@ -1,6 +1,5 @@
 package com.example.algamoney.api.resource;
 
-import java.util.List;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletResponse;
@@ -20,13 +19,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.algamoney.api.event.RecursoCriadoEvent;
 import com.example.algamoney.api.model.Pessoa;
 import com.example.algamoney.api.reposiory.PessoaRepository;
+import com.example.algamoney.api.reposiory.filter.PessoaFilter;
 import com.example.algamoney.api.service.PessoaService;
 
 @RestController
@@ -42,16 +41,16 @@ public class PessoaResource {
 	@Autowired
 	private PessoaService pessoaService;
 	
+//	@GetMapping
+//	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_PESSOA') and #oauth2.hasScope('read')")
+//	public List<Pessoa> listarPessoas(){
+//		return pessoaRepository.findAll();
+//	}
+	
 	@GetMapping
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_PESSOA') and #oauth2.hasScope('read')")
-	public List<Pessoa> listarPessoas(){
-		return pessoaRepository.findAll();
-	}
-	
-	@GetMapping(params = "nome")
-	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_PESSOA') and #oauth2.hasScope('read')")
-	public Page<Pessoa> pesquisar(@RequestParam(required = false, defaultValue = "%") String nome, Pageable pageable){
-		return pessoaRepository.findByNomeContaining(nome, pageable);
+	public Page<Pessoa> pesquisar(PessoaFilter pessoaFilter, Pageable pageable){
+		return pessoaRepository.filtrar(pessoaFilter, pageable);
 	}
 	
 	@GetMapping("/{codigo}")
