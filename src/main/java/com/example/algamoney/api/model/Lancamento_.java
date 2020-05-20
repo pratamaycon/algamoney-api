@@ -1,11 +1,13 @@
 package com.example.algamoney.api.model;
 
-import com.example.algamoney.api.model.enums.TipoLancamento;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
+
+import com.example.algamoney.api.model.enums.TipoLancamento;
 
 @Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
 @StaticMetamodel(Lancamento.class)

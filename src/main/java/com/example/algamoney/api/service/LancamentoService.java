@@ -62,7 +62,7 @@ public class LancamentoService {
 			pessoa = pessoaOptional.get();
 		}
 		
-		if (!pessoaOptional.isPresent() == pessoa.isInativo()) {
+		if (pessoa == null || pessoa.isInativo()) {
 			throw new PessoaInexistenteOuInativoException();
 		}
 		

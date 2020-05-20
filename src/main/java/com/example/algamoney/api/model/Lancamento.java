@@ -13,50 +13,43 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import com.example.algamoney.api.model.enums.TipoLancamento;
-
-
-
-
+import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "lancamento")
 public class Lancamento {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
-	@NotNull(message = "{nome.notnull}")
-	@Size(min = 3, max = 50, message = "{nome.size}")
+	@NotNull
 	private String descricao;
-	
-	@NotNull(message = "{nome.notnull}")
+
+	@NotNull
 	@Column(name = "data_vencimento")
 	private LocalDate dataVencimento;
-	
+
 	@Column(name = "data_pagamento")
 	private LocalDate dataPagamento;
-	
-	@NotNull(message = "{nome.notnull}")
+
+	@NotNull
 	private BigDecimal valor;
-	
-	@Size(min = 3, max = 100, message = "{nome.size}")
+
 	private String observacao;
-	
-	@NotNull(message = "{nome.notnull}")
+
+	@NotNull
 	@Enumerated(EnumType.STRING)
 	private TipoLancamento tipo;
-	
-	@NotNull(message = "{nome.notnull}")
+
+	@NotNull
 	@ManyToOne
 	@JoinColumn(name = "codigo_categoria")
 	private Categoria categoria;
-	
-	@NotNull(message = "{nome.notnull}")
+
+	@NotNull
 	@ManyToOne
 	@JoinColumn(name = "codigo_pessoa")
 	private Pessoa pessoa;
@@ -132,7 +125,7 @@ public class Lancamento {
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

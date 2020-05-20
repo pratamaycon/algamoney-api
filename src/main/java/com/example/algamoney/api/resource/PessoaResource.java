@@ -41,12 +41,6 @@ public class PessoaResource {
 	@Autowired
 	private PessoaService pessoaService;
 	
-//	@GetMapping
-//	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_PESSOA') and #oauth2.hasScope('read')")
-//	public List<Pessoa> listarPessoas(){
-//		return pessoaRepository.findAll();
-//	}
-	
 	@GetMapping
 	@PreAuthorize("hasAuthority('ROLE_PESQUISAR_PESSOA') and #oauth2.hasScope('read')")
 	public Page<Pessoa> pesquisar(PessoaFilter pessoaFilter, Pageable pageable){

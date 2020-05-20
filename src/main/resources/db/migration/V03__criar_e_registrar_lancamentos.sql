@@ -8,9 +8,11 @@ CREATE TABLE lancamento (
 	tipo VARCHAR(20) NOT NULL,
 	codigo_categoria BIGINT(20) NOT NULL,
 	codigo_pessoa BIGINT(20) NOT NULL,
-	FOREIGN KEY (codigo_categoria) REFERENCES categoria(codigo),
-	FOREIGN KEY (codigo_pessoa) REFERENCES pessoa(codigo)	
+	FOREIGN KEY (codigo_categoria)  REFERENCES	categoria(codigo),
+	FOREIGN KEY (codigo_pessoa)  REFERENCES	pessoa(codigo)	
 );
+
+SET FOREIGN_KEY_CHECKS=0;
 
 INSERT INTO lancamento(descricao, data_vencimento, data_pagamento, valor, observacao, tipo, codigo_categoria, codigo_pessoa) values('Salário mensal', '2017-06-10', null, 6500.00, 'Distribuição de lucros', 'RECEITA', 1, 1);
 INSERT INTO lancamento(descricao, data_vencimento, data_pagamento, valor, observacao, tipo, codigo_categoria, codigo_pessoa) values('Supermercado', '2017-02-10', '2017-02-10', 100.32, null, 'DESPESA', 2, 2);
