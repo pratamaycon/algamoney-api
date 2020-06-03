@@ -41,14 +41,14 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.secret(passwordEncoder.encode("@ngul@r0"))
 				.scopes("read", "write")
 				.authorizedGrantTypes("password", "authorization_code", "refresh_token")
-				.accessTokenValiditySeconds(60 * 3)
-				.refreshTokenValiditySeconds(3600 * 24)
+				.accessTokenValiditySeconds(60 * 10)
+				.refreshTokenValiditySeconds(24 * 3600)
 			.and()
 				.withClient("mobile")
 				.secret(passwordEncoder.encode("m0b1l30"))
 				.scopes("read")
 				.authorizedGrantTypes("password", "authorization_code", "refresh_token")
-				.accessTokenValiditySeconds(60 * 3)
+				.accessTokenValiditySeconds(60 * 1)
 				.refreshTokenValiditySeconds(3600 * 24);
 			
 	}

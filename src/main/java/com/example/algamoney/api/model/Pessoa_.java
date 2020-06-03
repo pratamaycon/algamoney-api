@@ -19,3 +19,4 @@ public abstract class Pessoa_ {
 	public static final String NOME = "nome";
 
 }
+
