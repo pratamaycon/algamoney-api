@@ -11,7 +11,7 @@
 - MYSQL 80 
 - Flyway
 - Hibernate
-
+- Thymeleaf (para criação do template e-mail)
 
 ### Ferramentas de Apoio
 
