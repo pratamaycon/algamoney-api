@@ -17,3 +17,9 @@
 
 - Postman
 - Swagger e Swagger ui
+
+### Funcionalidades desenvolvidas
+
+- Criação de template e envio de e-mail simples.
+- Geração de relatório.
+- Criação de Endpoints voltadas para a construção de um dashboard.
