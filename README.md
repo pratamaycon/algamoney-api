@@ -22,4 +22,4 @@
 
 - Criação de template e envio de e-mail simples.
 - Geração de relatório.
-- Criação de Endpoints voltadas para a construção de um dashboard.
+- Criação de Endpoints voltados para a construção do dashboard.
