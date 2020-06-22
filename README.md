@@ -28,6 +28,4 @@
 ## Funcionalidades Desenvolvidas Durante o período do curso...
 
 ## Funcionalidades Desenvolvidas Pós Conclusão do Curso
-#### Objetivo é gerar ainda mais valor ao projeto e deixa-lo cada vez mais próximo de uma aplicação real desenvolvida em Ambiente Corporativo.
-
-
+Objetivo é gerar ainda mais valor ao projeto e deixa-lo cada vez mais próximo de uma aplicação real desenvolvida em Ambiente Corporativo.
