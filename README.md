@@ -39,8 +39,7 @@
 ### Seguança Oauth2 
   - Geração de access_token Token Jwt e validação do access_token pelo refresh_token.
 
-## Funcionalidades Desenvolvidas Pós Conclusão do Curso...
-Objetivo é gerar ainda mais valor ao projeto e deixa-lo cada vez mais próximo de uma aplicação real desenvolvida em Ambiente Corporativo.
+## Funcionalidades Desenvolvidas com o objetivo de melhora do projeto...
 
 ### Swagger Ui
   - Documentar a api e expor seus enpoints para testes. 
