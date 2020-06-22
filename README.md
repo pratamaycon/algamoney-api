@@ -28,19 +28,19 @@
 ## Funcionalidades Desenvolvidas Durante o período do curso...
 
 ### Dashboard
-  - Geração de dados de estásticos de acordo com Categoria ou Dia
+  - Geração de dados de estásticos de acordo com a Categoria ou Dia.
   
 ### Relatórios
- - Geração de relatórios de acordo com intervalos de datas
+ - Geração de relatórios de acordo com intervalos de datas.
  
 ### Anexo de Documento
- - Anexação de documento no AWS
+ - Anexação de documento no AWS.
  
 ### Seguança Oauth2 
-  - Geração de access_token Token Jwt e validação do access_token pelo refresh_token. 
+  - Geração de access_token Token Jwt e validação do access_token pelo refresh_token.
 
 ## Funcionalidades Desenvolvidas Pós Conclusão do Curso...
 Objetivo é gerar ainda mais valor ao projeto e deixa-lo cada vez mais próximo de uma aplicação real desenvolvida em Ambiente Corporativo.
 
 ### Swagger Ui
-  - Documentar a api e expor seus enpoints para testes 
+  - Documentar a api e expor seus enpoints para testes. 
