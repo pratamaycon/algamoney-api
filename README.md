@@ -41,4 +41,4 @@
 ## Funcionalidades Desenvolvidas com o objetivo de melhora do projeto...
 
 ### Swagger Ui
-  - Documentar a api e expor seus enpoints para testes. 
+  - Criar a documentação da API 
