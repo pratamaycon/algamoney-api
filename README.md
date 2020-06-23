@@ -1,5 +1,4 @@
 # algamoney-api
-#### Status: Em Construção 
 
 # API RESTful feita em Spring Boot
 
