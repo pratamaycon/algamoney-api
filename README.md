@@ -8,9 +8,17 @@
 - Spring Boot ***VERSION `2.2.6`***
 - Banco de Dados MYSQL 80 
 - Necessário preencher corretamente os dados do seu servidor SMTP
-   - (Exibe imagem do application.properties) ...
+   ```properties
+      algamoney.mail.host=SERVIDORSMTP
+      algamoney.mail.port=PORTA
+      algamoney.mail.username=USERNAME
+      algamoney.mail.password=PASSWORD
+    ```
 - Necessário preencher corretamente as suas Creendências do AWS
-  - (Exibe imagem do application.properties) ...
+  ```properties
+    algamoney.s3.access-key-id=ID_ACCESS_KEY
+    algamoney.s3.secret-access-key=ID_SECRET_KEY
+    ```
  
  ### Tecnologias Utilizadas
  - Flyway
