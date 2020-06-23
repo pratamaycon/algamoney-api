@@ -1,6 +1,4 @@
-# algamoney-api
-
-# API RESTful feita em Spring Boot
+# API RESTful feita em Spring Boot - algamoney-api -
 
 ## Requisitos e Ferramentas utilizadas
 
