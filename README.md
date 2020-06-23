@@ -34,7 +34,7 @@
  - Geração de relatórios de acordo com intervalos de datas.
  
 ### Anexo de Documento
- - Anexação de documento no AWS.
+ - Anexação de documento na AWS.
  
 ### Seguança Oauth2 
   - Geração de access_token Token Jwt e validação do access_token pelo refresh_token.
