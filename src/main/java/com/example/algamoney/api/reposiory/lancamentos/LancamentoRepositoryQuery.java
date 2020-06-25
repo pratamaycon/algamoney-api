@@ -11,7 +11,7 @@ import com.example.algamoney.api.dto.LancamentoEstatisticaDia;
 import com.example.algamoney.api.dto.LancamentoEstatisticaPessoa;
 import com.example.algamoney.api.model.Lancamento;
 import com.example.algamoney.api.reposiory.filter.LancamentoFilter;
-import com.example.algamoney.api.reposiory.projection.LancamentoDTO;
+import com.example.algamoney.api.reposiory.projection.ResumoLancamento;
 
 public interface LancamentoRepositoryQuery {
 	
@@ -21,6 +21,6 @@ public interface LancamentoRepositoryQuery {
 
 	public Page<Lancamento> filtrar(LancamentoFilter lancamentoFilter, Pageable pageable);
 
-	public Page<LancamentoDTO> resumir(LancamentoFilter lancamentoFilter, Pageable pageable);
+	public Page<ResumoLancamento> resumir(LancamentoFilter lancamentoFilter, Pageable pageable);
 
 }

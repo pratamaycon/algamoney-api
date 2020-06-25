@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 import com.example.algamoney.api.model.enums.TipoLancamento;
 
-public class LancamentoDTO {
+public class ResumoLancamento {
 
 	private Long codigo;
 	private String descricao;
@@ -15,13 +15,13 @@ public class LancamentoDTO {
 	private TipoLancamento tipo;
 	private String categoria;
 	private String pessoa;
-
-	public LancamentoDTO(Long codigo, String descricao, LocalDate dataVencimento, LocalDate datPagamento,
+	
+	public ResumoLancamento(Long codigo, String descricao, LocalDate dataVencimento, LocalDate dataPagamento,
 			BigDecimal valor, TipoLancamento tipo, String categoria, String pessoa) {
 		this.codigo = codigo;
 		this.descricao = descricao;
 		this.dataVencimento = dataVencimento;
-		this.dataPagamento = datPagamento;
+		this.dataPagamento = dataPagamento;
 		this.valor = valor;
 		this.tipo = tipo;
 		this.categoria = categoria;
@@ -52,12 +52,12 @@ public class LancamentoDTO {
 		this.dataVencimento = dataVencimento;
 	}
 
-	public LocalDate getDatPagamento() {
+	public LocalDate getDataPagamento() {
 		return dataPagamento;
 	}
 
-	public void setDatPagamento(LocalDate datPagamento) {
-		this.dataPagamento = datPagamento;
+	public void setDataPagamento(LocalDate dataPagamento) {
+		this.dataPagamento = dataPagamento;
 	}
 
 	public BigDecimal getValor() {

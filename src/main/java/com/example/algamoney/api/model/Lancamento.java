@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -13,11 +14,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.example.algamoney.api.model.enums.TipoLancamento;
+import com.example.algamoney.api.reposiory.listener.LancamentoAnexoLsitener;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 
+@EntityListeners(LancamentoAnexoLsitener.class)
 @Entity
 @Table(name = "lancamento")
 public class Lancamento {
@@ -50,10 +55,16 @@ public class Lancamento {
 	@JoinColumn(name = "codigo_categoria")
 	private Categoria categoria;
 
+	@JsonIgnoreProperties("contatos")
 	@NotNull
 	@ManyToOne
 	@JoinColumn(name = "codigo_pessoa")
 	private Pessoa pessoa;
+	
+	private String anexo;
+	
+	@Transient
+	private String urlAnexo;
 	
 	@JsonIgnore
 	public boolean isReceita() {
@@ -130,6 +141,22 @@ public class Lancamento {
 
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
+	}
+	
+	public String getAnexo() {
+		return anexo;
+	}
+
+	public void setAnexo(String anexo) {
+		this.anexo = anexo;
+	}
+
+	public String getUrlAnexo() {
+		return urlAnexo;
+	}
+
+	public void setUrlAnexo(String urlAnexo) {
+		this.urlAnexo = urlAnexo;
 	}
 
 	@Override
