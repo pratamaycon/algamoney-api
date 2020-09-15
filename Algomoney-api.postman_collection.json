@@ -1,0 +1,1236 @@
+{
+	"info": {
+		"_postman_id": "74c9e76c-6371-4380-8ca9-3bf24ea8b62f",
+		"name": "Algomoney-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Todas Categorias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json/Charset=UTF-8",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTg4MzQ0NjAxLCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiI0N2Q4OTg1Mi01ODM4LTRmM2UtODY4YS0wMzk5ZWQ3MDE5MzYiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.DvYhCZfOWZPY-mIsssmmczolK1jTfMi_VbiyN9CpCNw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/categorias",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Categoria",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg== ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\": \"Outros\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/categorias",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pegar Categoria",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{path_padrao}}/categorias/1",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todas Categorias (Basic Oauth)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@algamoney.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{path_padrao}}/categorias",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Todas Pessoas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTkyMTIwNjg1LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiJlODIyYmE3Ni1mNDVhLTQyOWMtODljZi1hM2I3MzFhY2Y0MDgiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.377xu9TW4BOGY_XWuV0KJuWfQTELYeZh_RE9UJtltWM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/pessoas",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "davi",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pegar Pessoa",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/pessoas/11",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Pessoa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTkyMTA3OTE2LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiJkYTBlYTcxOC1hZWNhLTRiZjgtYmVmYS1kOTg2ZWQxOWE3MTAiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.3CF6OHtM2CeQqoFevsZD8vu59pl2rlbIWVpKq8yCrQw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Davi\",\r\n    \"ativo\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/pessoas",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Pessoa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/pessoas/11?",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas",
+								"11"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Pessoa",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Henrique Santiago Medeiros\",\n    \"endereco\": {\n        \"logradouro\": \"Rua do Sapoxxx\",\n        \"numero\": \"1120\",\n        \"complemento\": \"Apto 2000\",\n        \"bairro\": \"Centro\",\n        \"cep\": \"12.400-12\",\n        \"cidade\": \"BH\",\n        \"estado\": \"Minas Gerais\"\n    },\n    \"ativo\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/pessoas/7",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Propriedade ativo em Pessoa",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "false",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/pessoas/1/ativo",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas",
+								"1",
+								"ativo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pesquisar Pessoa",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTg4MzQ2MjY2LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiI5NWIzZWMxYy1iMTM3LTQyZWYtOGFjNS05YzM0N2RkYTA2YjAiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.EHa7zIhu24Wa-tnAEduxfB7GsvCWl5u9Ie8loI2L-xc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/pessoas?nome=carlos",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "carlos"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrat Pessoa com Contato",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Maycon Prata\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua Lauro\",\r\n        \"numero\": \"15\",\r\n        \"complemento\": \"Sobrado\",\r\n        \"bairro\": \"Morro do Castro\",\r\n        \"cep\": \"24.510-520\",\r\n        \"cidade\": \"São Gonçalo\",\r\n        \"estado\": \"RJ\"\r\n    },\r\n    \"ativo\": true,\r\n    \"contatos\": [\r\n        {\r\n            \"nome\": \"Mayki\",\r\n            \"email\": \"maycons@algamoney.com\",\r\n            \"telefone\": \"00 0000-0000\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/pessoas",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar pessoa com Contato",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"codigo\": 11,\r\n    \"nome\": \"Maycon Prata\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua Lauro\",\r\n        \"numero\": \"15\",\r\n        \"complemento\": \"Sobrado\",\r\n        \"bairro\": \"Morro do Castro\",\r\n        \"cep\": \"24.510-520\",\r\n        \"cidade\": \"São Gonçalo\",\r\n        \"estado\": \"RJ\"\r\n    },\r\n    \"ativo\": true,\r\n    \"contatos\": [\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/pessoas/11",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"pessoas",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Lancçamento",
+			"item": [
+				{
+					"name": "Todos Lancamentos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos?resumo=",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos"
+							],
+							"query": [
+								{
+									"key": "resumo",
+									"value": ""
+								},
+								{
+									"key": "dataVencimentoDe",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "dataVencimentoAte",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pegar Lançamento",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/1",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Lancaçamento",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@algamoney.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"descricao\": \"Workshop Spring Boot e Angular 4\",\n    \"dataVencimento\": \"2020-07-10\",\n    \"dataPagamento\": \"2020-07-25\",\n    \"valor\": 100,\n    \"tipo\": \"DESPESA\",\n    \"categoria\": {\n    \t\"codigo\": 5\n    },\n    \"pessoa\" : {\n    \t\"codigo\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar Lançamentos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos"
+							],
+							"query": [
+								{
+									"key": "dataVencimentoDe",
+									"value": "2017-06-10",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Lançamento",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/16",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Paginação Lancamento",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								""
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "pege",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resumo Lancamento",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTkyMTkyNDgwLCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiI4ZTVkY2U4YS1jMzFjLTQyMTgtOTY3Yy04OWU5NDkxZWI5NjkiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.fDo4KX4R_CQF_iK99vfiuZZCzVZB6AG7xrDTozWN4V0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos?resumo&descricao=Maria",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos"
+							],
+							"query": [
+								{
+									"key": "resumo",
+									"value": null
+								},
+								{
+									"key": "descricao",
+									"value": "Maria"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Lancamento",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@algamoney.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTg4MzU1MzI0LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiI5NDhiMzNhNi0zM2IwLTQ4YWEtYTczYy03MDgxODUzOGRlOWIiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.ll1oYZ3dynO2L5VgnGhJKLVx0hf4ELfihTXHV5MLu-k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"descricao\": \"Salário mensal\",\r\n            \"dataVencimento\": \"2018-06-09\",\r\n            \"dataPagamento\": null,\r\n            \"valor\": 6500.00,\r\n            \"observacao\": \"Distribuição de lucros\",\r\n            \"tipo\": \"RECEITA\",\r\n            \"categoria\": {\r\n                \"codigo\": 1,\r\n                \"nome\": \"Lazer\"\r\n            },\r\n            \"pessoa\": {\r\n                \"codigo\": 12,\r\n                \"nome\": \"Maycon\",\r\n                \"endereco\": {\r\n                    \"logradouro\": \"Rua do Abacaxi\",\r\n                    \"numero\": \"10\",\r\n                    \"complemento\": null,\r\n                    \"bairro\": \"Brasil\",\r\n                    \"cep\": \"38.400-12\",\r\n                    \"cidade\": \"Uberlândia\",\r\n                    \"estado\": \"MG\"\r\n                },\r\n                \"ativo\": false\r\n            }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/1",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Lancamento com Anexo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"descricao\": \"Viagem de Dezembro\",\r\n    \"dataVencimento\": \"2019-12-10\",\r\n    \"dataPagamento\": null,\r\n    \"valor\": 6500.00,\r\n    \"observacao\": \"Sul\",\r\n    \"tipo\": \"DESPESA\",\r\n    \"categoria\": {\r\n        \"codigo\": 1\r\n    },\r\n    \"pessoa\": {\r\n        \"codigo\": 1\r\n    },\r\n    \"anexo\": \"03d723e6-52bc-40fb-8d32-a5a5734fefa7_response.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Lancamento com Anexo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg=="
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 1,\r\n    \"descricao\": \"Salário mensal\",\r\n    \"dataVencimento\": \"2020-05-09\",\r\n    \"dataPagamento\": null,\r\n    \"valor\": 6500.00,\r\n    \"observacao\": \"Distribuição de lucros\",\r\n    \"tipo\": \"RECEITA\",\r\n    \"categoria\": {\r\n        \"codigo\": 1\r\n    },\r\n    \"pessoa\": {\r\n        \"codigo\": 1\r\n    },\r\n    \"anexo\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/1",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Autorização Oauth",
+			"item": [
+				{
+					"name": "Access Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "angular",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "@ngul@r0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client",
+									"value": "angular",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "admin@algamoney.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path_padrao}}/oauth/token",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Access Token com  Refresh Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "@ngul@r0",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "angular",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhdGkiOiIyMjUyYzJkYS1jYjAxLTRkODUtODE1Ni0yYWNiZjc2NTQ3NGYiLCJleHAiOjE1ODgwMTU2MjcsImF1dGhvcml0aWVzIjpbIlJPTEVfUk9MRSJdLCJqdGkiOiI3ODM1ZTQyYy1iMzY0LTQ2MDQtODg2Yi1mMGVlZGNjZjQ4ZGMiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.gbXjEo1UK9z18SAKZLG2Qdjjh9NE9Z-UiAz52mCMrMI",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path_padrao}}/oauth/token",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODgxNzkxMTcsInVzZXJfbmFtZSI6ImFkbWluQGFsZ2Ftb25leS5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiI1OTgxNTA5Zi05ZTQ0LTQ1ZWItYjViZC1lOTY4NDhlMjczZDEiLCJjbGllbnRfaWQiOiJhbmd1bGFyIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.uOWntiXlpGJsDqfUQf8yFfLU_1-DmLZR2IoWVajC-UU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/tokens/revoke",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"tokens",
+								"revoke"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "dfb98373-f287-4966-9cd4-b918384342d0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "95e5b41a-d57f-447b-8068-ad6ea73d2bcb",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Estatística",
+			"item": [
+				{
+					"name": "Estatística Por Categoria",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg=="
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/estatisticas/por-categoria",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"estatisticas",
+								"por-categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Estatística Por Dia",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/estatistica/por-dia",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"estatistica",
+								"por-dia"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Relatório",
+			"item": [
+				{
+					"name": "Baixar Relatório",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/relatorios/por-pessoa?inicio=2020-01-02&fim=2020-05-01",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"relatorios",
+								"por-pessoa"
+							],
+							"query": [
+								{
+									"key": "inicio",
+									"value": "2020-01-02"
+								},
+								{
+									"key": "fim",
+									"value": "2020-05-01"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Anexo",
+			"item": [
+				{
+					"name": "Fazer Anexo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic YWRtaW5AYWxnYW1vbmV5LmNvbTphZG1pbg==",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "anexo",
+									"type": "file",
+									"src": "/C:/Users/Maycon.Conceicao/Desktop/response.pdf"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{path_padrao}}/lancamentos/anexo",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"lancamentos",
+								"anexo"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Estado",
+			"item": [
+				{
+					"name": "Todos Estados",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTkyMzcwMzY5LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiIyYzNiMjk5ZC02NzEyLTQ1OGQtYTUyOS0xZGQyOWNjMzExN2EiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.yl8V4LyyzkvechjxnE5euhWRtB8t_x5j0a6o82lVRgI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/estados",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"estados"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cidade",
+			"item": [
+				{
+					"name": "Todas Cidades",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbkBhbGdhbW9uZXkuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sIm5vbWUiOiJBZG1pbmlzdHJhZG9yIiwiZXhwIjoxNTkyMzcwMzY5LCJhdXRob3JpdGllcyI6WyJST0xFX0NBREFTVFJBUl9DQVRFR09SSUEiLCJST0xFX1BFU1FVSVNBUl9QRVNTT0EiLCJST0xFX1JFTU9WRVJfUEVTU09BIiwiUk9MRV9DQURBU1RSQVJfTEFOQ0FNRU5UTyIsIlJPTEVfUEVTUVVJU0FSX0xBTkNBTUVOVE8iLCJST0xFX1JFTU9WRVJfTEFOQ0FNRU5UTyIsIlJPTEVfQ0FEQVNUUkFSX1BFU1NPQSIsIlJPTEVfUEVTUVVJU0FSX0NBVEVHT1JJQSJdLCJqdGkiOiIyYzNiMjk5ZC02NzEyLTQ1OGQtYTUyOS0xZGQyOWNjMzExN2EiLCJjbGllbnRfaWQiOiJhbmd1bGFyIn0.yl8V4LyyzkvechjxnE5euhWRtB8t_x5j0a6o82lVRgI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{path_padrao}}/cidades?estado=1",
+							"host": [
+								"{{path_padrao}}"
+							],
+							"path": [
+								"cidades"
+							],
+							"query": [
+								{
+									"key": "estado",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "55f7bbde-f83a-4418-83c4-aabae5924a83",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d498848c-0f0b-4654-988c-07e6decd39bc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
